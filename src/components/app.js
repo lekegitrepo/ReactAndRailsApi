@@ -31,6 +31,11 @@ export default class App extends Component {
             loggedInStatus: 'LOGGED_IN',
             user: response.data.user
           })
+        } else if (!response.data.logged_in && this.state.loggedInStatus === 'LOGGED_IN') {
+          this.setState({
+            loggedInStatus: 'NOT_LOGGED_IN',
+            user: {}
+          })
         }
       }).catch(error => {
         console.log('check login error', error)
