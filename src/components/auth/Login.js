@@ -17,7 +17,7 @@ export default class Login extends Component {
 
   handleSubmit(event) {
     const {email, password} = this.state;
-    axios.post('http://localhost:3001/sessions', {
+    axios.post('https://railsapiwithreactauth.herokuapp.com/sessions', {
       user: {
         email: email,
         password: password,

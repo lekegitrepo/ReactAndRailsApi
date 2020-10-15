@@ -17,7 +17,7 @@ export default class Home extends Component {
   }
 
   handleLogoutClick() {
-    axios.delete('http://localhost:3001/logout',
+    axios.delete('https://railsapiwithreactauth.herokuapp.com/logout',
       { withCredentials: true}).then(response => {
         this.props.handleLogout();
       }).catch(error => {
