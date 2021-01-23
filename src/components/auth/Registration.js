@@ -18,7 +18,7 @@ export default class Registration extends Component {
 
   handleSubmit(event) {
     const {email, password, password_confirmation} = this.state;
-    axios.post('https://railsapiwithreactauth.herokuapp.com/registrations', {
+    axios.post('http://localhost:3001/registrations', {
       user: {
         email: email,
         password: password,
